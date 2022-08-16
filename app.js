@@ -313,6 +313,7 @@ setTimeout(()=>{ firstChar()},1005)
 function showOffPump(statePump){
 bi.classList.add("slideBi") 
 btnTurnOn.style.backgroundColor=``
+
   if(statePump == '0'){
     iconFan.classList.remove("fa-spin")
     state_pump.innerHTML = "OFF"
@@ -324,6 +325,7 @@ btnTurnOn.style.backgroundColor=``
 function showOnPump(statePump){
 bi.classList.remove("slideBi")
 btnTurnOn.style.backgroundColor=`#74ace2`
+
 if(statePump == '1'){
   iconFan.classList.add("fa-spin")
   state_pump.innerHTML = "ON"
@@ -332,12 +334,22 @@ if(statePump == '1'){
 }
 // function check state pump:
 function checkState(state, statePump){
-  if(state == 1){
+  if(isAuto=="0"){
+    if(state == 1){
+        showOnPump(statePump);
+    } 
+    if(state == 0){
+       showOffPump(statePump);
+    }   
+
+  }else{
+    if(statePump=="1"){
       showOnPump(statePump);
-  } 
-  if(state == 0){
-     showOffPump(statePump);
-  }   
+    }
+    if(statePump=="0"){
+      showOffPump(statePump);
+    }
+  }
 }
 
 
