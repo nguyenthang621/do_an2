@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&family=Shizuru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="reponsive.css">
+    <title>Phầm mềm giám sát độ ẩm đất</title>
+</head>
+
+<body onload="UpdateData()">
+    <div class="layout_lostConnect"></div>
+    <div class="boxIconConnect ">
+          
+        <div class="titleLostConnect">
+          <p>
+            Mất kêt nối wifi ở esp
+
+          </p>
+          <div class="loadingio-spinner-radio-k9a2itvt99"><div class="ldio-u7lbwu503vk">
+            <div></div><div></div><div></div>
+            </div></div>
+        </div>
+        <a href="http://192.168.4.1">kết nối lại wifi</a>
+      </div>
+    <!-- <div class="background"></div> -->
+    <div id="toast"></div>
+    <header class="header">
+        <div class="logoSchool">HUST</div>
+        <div class="logoHustRespon"><img src="logoBK.png" alt=""></div>
+        <div class="title_header"><p>Phần mềm giám sát độ ẩm đất</p></div>
+        <div class="logoPhysical"><img src="https://sep.hust.edu.vn/wp-content/uploads/Logo-SEP-e1592583941664.png" alt=""></div>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+    </header>
+    <div class="box_main">
+
+        <div class="container">
+            <div class="title_timer">
+                27/6/2022
+            </div>
+            <div class="card">
+                <div id="circlechart"> </div>
+            </div>
+            <div class="box_control">
+                <div title="Lưu trữ dữ liệu" class="btn_list">
+                    <span class="title_list">
+                        Lưu trữ
+                    </span>
+                    <div class="icon_save"><i class="fa-solid fa-list"></i></div>
+                    <div class="list_data hideList"></div>
+                </div>
+    
+                <div title="Nút bật/tắt động cơ" class="box_fan">
+                    <div class="layout_box_fan"></div>
+                    <span class="title_fan">
+                            Động cơ
+                    </span>
+        
+                    <!-- button pump -->
+                    <div class="navbar__control__btnLight switch sw_turn">
+                        <span class="bi slideBi bi_turn"><span class="icon moon"> <i class="fa-solid fa-fan " style="--fa-animation-duration: 0.8s;"></i></span>  </span>
+                    </div>
+                </div>
+        
+                <div class="auto_control">
+                  <p class="title_option animate__animated">Tự động</p>
+                  <div class="navbar__control__btnLight switch sw_auto color_bi_auto">
+                    <span class="bi bi_auto"><span class="icon moon"> <i class="fa-solid fa-bolt-auto"></i></span>  </span>
+                </div>
+                </div>
+    
+                <div title="Trạng thái động cơ" class="state_pump">
+                    <span class="title_state">OFF</span>
+                </div>
+                
+                
+            </div>
+    
+        </div>
+        
+        <div class="box_chart">
+            <!-- <div class="title_chart"></div> -->
+            <div class="chart_data">
+                <div class="btn_change_chart"><i class="fa-solid fa-chart-line"></i></div>
+                <div id="myChart"></div>
+            </div>
+    
+        </div>
+    </div>
+
+    <footer class="footer">
+      <div class="logoPhysical"><img src="https://sep.hust.edu.vn/wp-content/uploads/Logo-SEP-e1592583941664.png" alt="">
+      <div class="name_logo">Viện Vật Lý Kỹ Thuật</div>
+      </div>
+      <div class="title_header"><p>Phần mềm giám sát độ ẩm đất</p></div>
+    </footer>
+
+
+    
+</body>
+<!-- --------------------- -->
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script type="text/javascript" src="https://raw.github.com/highslide-software/highcharts.com/master/js/highcharts.src.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+<script src="app.js"></script>
+</html>
